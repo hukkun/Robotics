@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find velodyne_pointcloud)/launch/32e_points.launch" />
+	<include file="$(find perfect_velodyne)/launch/normal_estimation.launch" />
+	<!-- <include file="$(find classification)/launch/human_detection.launch" /> -->
+	<include file="$(find human_detection)/launch/human_for_3dmap.launch" />
+
+	<!-- <node pkg="dynamic_recognition" type="human_tracking" name="human_tracking" output="screen" /> -->
+
+	<node pkg="rviz" type="rviz" name="rviz" args="-d /home/amsl/.rviz/human_tracking.rviz" />
+</launch>
+	
+

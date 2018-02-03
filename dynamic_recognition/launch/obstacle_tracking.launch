@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- <include file="$(find sq_lidar_conversions)/launch/sq_lidar_convertor.launch" /> -->
+	<!-- <include file="$(find sq_lidar_conversions)/launch/sq_lidar_convertor_filtered.launch" /> -->
+	<include file="$(find sq_lidar_conversions)/launch/sq_lidar_convertor_for_dynamic_obs.launch" />
+	<node pkg="sq_height_map" type="sq_heightmap_node" name="sq_heightmap_node" />
+	<node pkg="pcl_tutorials" type="cluster_test" name="cluster_test" />
+		<param name="MIN_SIZE" value="0.01f" />
+		<param name="MAX_SIZE" value="1.4f" />
+
+		<node pkg="dynamic_recognition" type="obstacle_tracking" name="obstacle_tracking" output="screen" />
+
+	<node pkg="rviz" type="rviz" name="rviz" args="-d /home/amsl/.rviz/obstacle_tracking.rviz" />
+	<node pkg="pcl_tutorials" type="point_union" name="point_union" />
+</launch>
+	
+
