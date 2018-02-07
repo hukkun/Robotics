@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="pcl_tutorials" type="velodyne2map_pos2" name="velodyne2map_pos2" />
+	<node pkg="pcl_tutorials" type="velodyne2map_pt2" name="velodyne2map_pt2" />
+</launch>
+	
+

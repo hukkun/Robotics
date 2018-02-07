@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="pcl_tutorials" type="centerlaser2odom_pos" name="centerlaser2odom_pos" />
+	<node pkg="pcl_tutorials" type="centerlaser2odom_pt" name="centerlaser2odom_pt" />
+</launch>
+	
+

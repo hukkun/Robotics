@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find velodyne_pointcloud)/launch/32e_points.launch" />
+	<node pkg="velodyne_height_map" type="rm_ground_minmax_node" name="rm_ground_minmax_node" />
+	<node pkg="pcl_tutorials" type="cluster_velodyne" name="cluster_velodyne" output="screen" />
+		<param name="MIN_SIZE" value="0.03f" />
+		<param name="MAX_SIZE" value="0.7f" />
+
+	<node pkg="rviz" type="rviz" name="rviz" args="-d /home/amsl/.rviz/cluster_velodyne.rviz" />
+</launch>
+	
+

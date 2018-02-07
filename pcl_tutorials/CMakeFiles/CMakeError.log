@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_923b2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_923b2.dir/build.make CMakeFiles/cmTC_923b2.dir/build
+make[1]: ディレクトリ '/home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp' に入ります
+Building C object CMakeFiles/cmTC_923b2.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_923b2.dir/CheckSymbolExists.c.o   -c /home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_923b2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_923b2.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_923b2.dir/CheckSymbolExists.c.o  -o cmTC_923b2 -rdynamic 
+CMakeFiles/cmTC_923b2.dir/CheckSymbolExists.c.o: 関数 `main' 内:
+CheckSymbolExists.c:(.text+0x16): `pthread_create' に対する定義されていない参照です
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_923b2.dir/build.make:97: ターゲット 'cmTC_923b2' のレシピで失敗しました
+make[1]: *** [cmTC_923b2] エラー 1
+make[1]: ディレクトリ '/home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp' から出ます
+Makefile:126: ターゲット 'cmTC_923b2/fast' のレシピで失敗しました
+make: *** [cmTC_923b2/fast] エラー 2
+
+File /home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_982cd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_982cd.dir/build.make CMakeFiles/cmTC_982cd.dir/build
+make[1]: ディレクトリ '/home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp' に入ります
+Building C object CMakeFiles/cmTC_982cd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_982cd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_982cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_982cd.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_982cd.dir/CheckFunctionExists.c.o  -o cmTC_982cd -rdynamic -lpthreads 
+/usr/bin/ld: -lpthreads が見つかりません
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_982cd.dir/build.make:97: ターゲット 'cmTC_982cd' のレシピで失敗しました
+make[1]: *** [cmTC_982cd] エラー 1
+make[1]: ディレクトリ '/home/amsl/ros_catkin_ws/src/pcl_tutorials/CMakeFiles/CMakeTmp' から出ます
+Makefile:126: ターゲット 'cmTC_982cd/fast' のレシピで失敗しました
+make: *** [cmTC_982cd/fast] エラー 2
+
+

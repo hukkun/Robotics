@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- <rosparam file="$(find params)/run_test/pcl_viewer.yaml" /> -->
+	<rosparam file="$(find pcl_tutorials)/param/pcl_viewer.yaml" />
+	<node pkg="pcl_tutorials" type="pcd_loader" name="pcd_loader" output="screen" />
+	<!-- <node pkg="pcl_tutorials" type="pcd_loader_local" name="pcd_loader_local" output="screen" /> -->
+</launch>

@@ -1,0 +1,7 @@
+# map3d: {rm_gnd4ndt: /home/amsl/sq2_d_kan_si2017_vis.pcd} 
+# map3d: {rm_gnd4ndt: /home/amsl/sq2_si2017_human.pcd} 
+map3d: {rm_gnd4ndt: /home/amsl/sq2_si2017_human_ds.pcd} 
+# map3d: {rm_gnd4ndt: /home/amsl/d_kan_around_si2017_gicp_kai1.pcd} 
+# map3d: {rm_gnd4ndt: /home/amsl/d_kan_around_si2017_gicp_kai1_ds.pcd} 
+# map3d: {rm_gnd4ndt: /home/amsl/sq_pcd/6.pcd} 
+# map3d: {rm_gnd4ndt: /home/amsl/vel_pcd/6.pcd} 
